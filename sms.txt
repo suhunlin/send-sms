@@ -1,0 +1,3 @@
++886988888888 Hi!你好～我的名字是chloe，來測試python寄簡訊功能
++886989999999 Hello ! My name is Shu-Hunlin，I write a program to test sms function!
++886987777777 Hi!你好嗎？我的名字是Suhun，來測試python寄簡訊功能
