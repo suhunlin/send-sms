@@ -34,6 +34,15 @@ def handle_decoding_message(sms_read_format):
 def send_sms(sid,token,phone_number,sms_decoding):
     account_sid = sid
     accound_token = token
+    if account_sid == None:
+        print('Please input the correct account sid!!!')
+        return
+    elif accound_token == None:
+        print('Please input the correct account token!!!')
+        return
+    elif phone_number == None:
+        print('Please input the correct phone number!!!')
+        return
     client = Client(account_sid,accound_token)
     for sms in sms_decoding:
         message = client.messages.create(
@@ -45,9 +54,9 @@ def send_sms(sid,token,phone_number,sms_decoding):
 
 def main():
     filename = 'sms.txt'
-    sid = 'ACf707a' # input your sid from twilio web
-    token = '319b6' # input your token from twilio web
-    my_pyhon = '+198888888' #input your phone number from twilio web
+    sid = None # input your sid from twilio web
+    token = None # input your token from twilio web
+    my_pyhon = None #input your phone number from twilio web
     if os.path.exists(filename):
         sms_read_format = read_file(filename)
         sms_decoding = handle_decoding_message(sms_read_format)
