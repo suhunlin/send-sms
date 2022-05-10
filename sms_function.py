@@ -26,6 +26,7 @@ def handle_decoding_message(sms_read_format):
                     str += word + ' '#把讀出的訊息暫存加上空白鍵(英文間隔)存到str
                     split_sms_read_format_by_blank.pop(1)#pop掉第一個位置的訊息，讓後面的訊息往前移動
                 split_sms_read_format_by_blank.append(str)#把處理好的訊息存回split_sms_read_format_by_blank
+                str = ''
                 sms_decoding.append(split_sms_read_format_by_blank)
             else:
                 sms_decoding.append(split_sms_read_format_by_blank)
